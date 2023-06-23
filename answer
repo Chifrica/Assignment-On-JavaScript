@@ -1,0 +1,33 @@
+var dairy = ['cheese', 'sour cream', 'milk', 'yogurt', 'ice cream', 'milkshake'];
+
+function logDairy(){
+    for(prop of dairy){
+        console.log(prop);
+    }
+}
+
+logDairy()
+
+const animal = {
+    canJump: true
+};
+
+const bird = Object.create(animal);
+bird.canFly = true;
+bird.hasFeathers = true;
+
+function birdCan(){
+    for(prop1 of Object.keys(bird)){
+        console.log(prop1 + ": " + bird[prop1]);
+    }     
+}
+
+birdCan();
+
+function animalCan(){
+    for(let prop3 in bird){
+        console.log(prop3 + ": " + bird[prop3]);
+    } 
+   
+}
+animalCan()
